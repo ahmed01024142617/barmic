@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- اسم الموقع -->
+    <title>BARMC</title>
+    <!-- ربط ال css -->
+    <link rel="stylesheet" href="ahmed.css">
+    <!-- ربط الايقونات بالموقع -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <!-- ايقونة الكوكب فوق شمال -->
+    <link rel="icon" href="photo.icon.jpeg " type="image/x-icon">
+</head>
+
+<body>
+    <div class="body">
+
+        <header>
+            <!-- جزء ايقونة الموقع -->
+            <div class="icon">
+                <!-- لوجو الموقع header -->
+                <img src="photo.icon.jpeg" alt="Icon" class="icon-barmc">
+                <!-- اسم الموقع header -->
+                <a  class="custom-font">BARMC</a>
+            </div>
+    
+            <!-- ال navbar -->
+            <nav>
+                <input type="checkbox" id="sidebar-active">
+                <label for="sidebar-active" class="open-sidebar-button">
+                    <i class="fas fa-bars"></i>
+                </label>
+    
+                <label for="sidebar-active" id="overlay"></label>
+                <div class="links-container">
+                    <label for="sidebar-active" class="close-sidebar-button">
+                        <i class="fas fa-times close"></i>
+                    </label>
+                            <a href="#products" class="link home-link">المنتجات</a>
+                            <a href="#DALEL" class="link">الدليل</a>
+                            <a href="#Contact us" class="link">التواصل</a>
+                            <a href="#about" class="link">قصتنا</a>
+                            <a href="#Rating" class="link">التقييم</a>
+                </div>
+            </nav>
+        </header>
+    
+    
+    <!-- ============================================================================================= -->
+    
+    <div class="mid-section" id="products">
+        <div class="right">
+<form class="biggest-form" id="main-form">
+    <!-- جزء المقاسات -->
+    <div class="cont">
+        <!-- الوزن -->
+        <div>
+            <label>الوزن</label>
+            <input type="text" id="weight" required maxlength="3" placeholder="kg" class="weight"
+                oninput="checkFormFilled()">
+        </div>
+        <!-- الطول -->
+        <div>
+            <label>الطول</label>
+            <input type="text" id="height" required maxlength="3" placeholder="سم" class="length"
+                oninput="checkFormFilled()">
+        </div>
+        <!-- المقاس -->
+        <div id="process-container">
+            <div class="process-item">
+                <label for="size-0">المقاس</label>
+                <select id="size-0" class="size-select"
+                    onchange="displayOptions(this); createSizeOptions(0); checkFormFilled();">
+                    <option value="">اختار</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="xl">XL</option>
+                    <option value="2xl">2XL</option>
+                    <option value="3xl">3XL</option>
+                    <option value="4xl">4XL</option>
+                    <option value="5xl">5XL</option>
+                    <option value="6xl">6XL</option>
+                    <option value="7xl">7XL</option>
+                    <option value="8xl">8XL</option>
+                </select>
+                <button type="button" onclick="createProcess()" class="btn2">+</button>
+                <div class="options-container" style="display: none;">
+                    <form action="">
+                        <div id="quantity-group-0" class="quantity-group"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3 id="total-display">المجموع: 0</h3>
+        </div>
+        <div class="buy">
+            <button id="buy-now-btn" onclick="handleBuyNow(event)" disabled>شراء</button>
+            <button id="rent-now-btn" onclick="handleRentNow(event)" disabled>إيجار</button>
+        </div>
+    </div>
+</form>
+
+        </div>
+        <!-- صورة تيشرت الريال -->
+        <div class="contain">
+            <img src="real.icon.png" class="right-img" id="change">
+        </div>
+    </div>
+    
+<!-- ===================================== -->
+<H1 id="DALEL">الدليل</H1>
+
+<div class="table">
+    <table>
+        <thead>
+            <tr>
+                <th>محيط الصدر</th>
+                <th>الوزن</th>
+                <th>المقاس</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <tr>
+                <td>50</td>
+                <td>60</td>
+                <td>S</td>
+            </tr>
+            <tr>
+                <td>55</td>
+                <td>70</td>
+                <td>M</td>
+            </tr>
+            <tr>
+                <td>60</td>
+                <td>80</td>
+                <td>L</td>
+            </tr>
+            <tr>
+                <td>65</td>
+                <td>90</td>
+                <td>XL</td>
+            </tr>
+            <tr>
+                <td>70</td>
+                <td>100</td>
+                <td>2XL</td>
+            </tr>
+            <tr>
+                <td>75</td>
+                <td>110</td>
+                <td>3XL</td>
+            </tr>
+            <tr>
+                <td>80</td>
+                <td>120</td>
+                <td>4XL</td>
+            </tr>
+            <tr>
+                <td>85</td>
+                <td>130</td>
+                <td>5XL</td>
+            </tr>
+            <tr>
+                <td>90</td>
+                <td>140</td>
+                <td>6XL</td>
+            </tr>
+            <tr>
+                <td>95</td>
+                <td>150</td>
+                <td>7XL</td>
+            </tr>
+            <tr>
+                <td>100</td>
+                <td>160</td>
+                <td>8XL</td>
+            </tr>
+    
+            <!-- Additional rows here -->
+        </tbody>
+    </table>
+</div>
+
+    <!-- =======
+        ====================================================================================== -->
+
+        <h1 id="Contact us">التواصل</h1>
+        <div class="wrapper">
+            <div class="main-content">
+                <div class="sidebar">
+                    <div class="address info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="label">العنوان</div>
+                        <div class="text1">مدينه المستقبل: الشروق</div>
+                        <div class="text2"></div>
+                    </div>
+                    <div class="phone info">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="label">الهاتف</div>
+                        <div class="text1">01064454393</div>
+                    </div>
+                    <div class="email info">
+                        <i class="fas fa-envelope"></i>
+                        <div class="label">الايميل</div>
+                        <div class="text1">ahmedelbahtety14@gmail.com</div>
+                    </div>
+
+                    <div class="icons">
+                        <a href="https://wa.me/201064454393" target="_blank"><i class="fab fa-whatsapp" id="whatsapp"></i></a>
+
+                        <a href="https://www.snapchat.com/add/ahmed_elbahtety?share_id=8UHBJoxvBrk&locale=en-US" target="_blank"><i class="fab fa-snapchat-ghost snapchat-icon" id="snapchat"></i></a>
+                        <a href="https://www.instagram.com/barmc19?igsh=YTQwNm1xZzI5Njl2" target="_blank"><i class="fab fa-instagram" id="instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61556762813050&mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook" id="facebook"></i></a>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="heading">يمكنك التواصل معنا هنا</div>
+                    <p>إذا كان لديك أي نوع من الاستفسارات المتعلقة بالشراء والايجار الخاص بنا يمكنك أن ترسل لنا رسالة
+                        من هنا.</p>
+                    <form action="#">
+                        <div class="input-wrapper message-wrapper">
+                            <textarea id="messageInput" placeholder="اكتب لنا رسالة"></textarea>
+                        </div>
+                        <div class="btn-wrapper">
+                            <input type="submit" value="ارسال الان" id="now" disabled>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+    <!-- ============================================================================================= -->
+    
+    
+        <!-- جزء ال about  -->
+        <h1 id="about">قصتنا</h1>
+        <div class="dad">
+            <div class="text-container">
+                <p class="about" >
+                    BARMC is an abbreviation for the Buy and Rent Military clothes <br>
+                    أي اشتري و أستأجر الملابس العسكرية و هي عبارة عن ( تيشيرت لبني و كاب كحلي ملصق بهم عل مصر )
+                    تأسست بارمك في 19 فبراير 2024 <br>
+                    بدأت الفكرة بميزانية صغيرة ولم يكن سوى حلم أحمد البحطيطي. ومع ذلك، في اليوم الذي نشر فيه أول بوست له على
+                    صفحة بارمك للملابس العسكرية، حصل على ردود فعل ممتازة، وبما أن الأسواق تبيع بسعر أعلى من سعرنا بسبب نسبة
+                    إيجار المتجر و جشع التجار، فإن الفكرة وراء بارمك هي توفير الوقت والمال للعملاء. وبما أننا متجر إلكتروني،
+                    فإننا لا نحدد نسبة الإيجار ولسنا جشعين. نحن نرى الأشياء باستمرار من جانب العميل
+                    وصلت طلبات بارمك إلى القاهرة والجيزة والشرقية وبنها والبحيرة. ولكن ما فاجأ الجميع هو تسليم طلبية إلى سيناء
+                    (طور) في 24 يوليو 2024.
+                </p>
+                <!-- النص كلام التاني المخفي -->
+                <div class="about2" id="full-about">
+                    <p class="about3" id="about4">
+                        ولا تزال بارمك تنمو في جميع أنحاء المحافظات المصرية
+                        تم إنجاز كل هذا دون الحاجة إلى إعلان ممول على وسائل التواصل الاجتماعي. وعندما التحق عدد من الطلاب
+                        بالدورة العسكرية في يوليو 2024 بمعهد هندسة الطيران بإمبابة، كانت ملابسهم من بارمك وفي 20 يوليو 2024، تم
+                        أيضًا التوصل إلى اتفاق مع مصنع في عين شمس لتوريد المزيد من التيشيرتات ذات الجودة الأفضل و قطن أكثر، مما
+                        أسعد العديد من العملاء و ما زالت الأسعار دون تغيير
+                    </p>
+                </div>
+                <!-- زرار اقرا المزيد -->
+                <button id="read-more-btn" onclick="toggleText()">اقرأ المزيد</button>
+                <!-- صورة  About  -->
+            </div>
+            <img src="photo.icon.jpeg" class="photo2">
+        </div>
+    
+    <!-- ============================================================================================= -->
+    
+    
+    <!-- ألتقييم -->
+        <div>
+            <h1 id="Rating">التقييم</h1>
+            <div class="rating-container" >
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <p id="rating-text"></p>
+            <form id="myForm">
+                <button type="submit" class="send" disabled>إرسال</button>
+            </form>
+            <!-- السهم -->
+            <div class="back-to-top" id="backToTop">
+                <i class="fa fa-arrow-up"></i>
+            </div>
+            <!-- ايقونات التواصل للفوتر -->
+            <div class="all">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61556762813050&mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/barmc19?igsh=YTQwNm1xZzI5Njl2" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/201064454393" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.snapchat.com/add/ahmed_elbahtety?share_id=8UHBJoxvBrk&locale=en-US" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
+                </div>
+    
+                <div>
+                    <p class="last-line">جميع الحقوق محفوظة 2024 لموقع بارمبك للملابس العسكرية <sup>&#x00AE;</sup></p>    
+                </div>
+            </div>
+            
+    
+        </div>
+    </div>
+    <!-- ربط الجافا سكريبت  -->
+    <script src="ahmed.js"></script>
+</body>
+</html>
